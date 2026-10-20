@@ -3,15 +3,14 @@ import faiss
 import numpy as np
 from sentence_transformers import SentenceTransformer
 
-MODEL_NAME = "sentence-transformers/all-MiniLM-L6-v2"
-_model = None
+MODEL_NAME = "BAAI/bge-small-en-v1.5"
+_models = {}
 
 
 def get_model(name=MODEL_NAME):
-    global _model
-    if _model is None:
-        _model = SentenceTransformer(name)
-    return _model
+    if name not in _models:
+        _models[name] = SentenceTransformer(name)
+    return _models[name]
 
 
 def load_chunks(path="data/chunks.jsonl"):
