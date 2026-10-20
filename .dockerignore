@@ -1,0 +1,11 @@
+venv/
+.git/
+.env
+mlruns/
+logs/
+__pycache__/
+*.pyc
+data/*.pdf
+data/index.faiss
+docs/
+.DS_Store.env*

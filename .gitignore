@@ -7,3 +7,4 @@ mlruns/
 *.faiss
 data/*.pdf
 logs/
+.env*
