@@ -1,0 +1,13 @@
+runName,strategy,chunk_size,embedding_model,hit_at_1,hit_at_3,hit_at_5,mrr,num_chunks
+fixed-800-bge-small-en-v1.5,fixed,800,BAAI/bge-small-en-v1.5,1.0,1.0,1.0,1.0,52.0
+sentence-800-bge-small-en-v1.5,sentence,800,BAAI/bge-small-en-v1.5,0.95,1.0,1.0,0.975,58.0
+fixed-800-all-MiniLM-L6-v2,fixed,800,sentence-transformers/all-MiniLM-L6-v2,0.95,0.95,1.0,0.96,52.0
+sentence-500-bge-small-en-v1.5,sentence,500,BAAI/bge-small-en-v1.5,0.9,0.95,1.0,0.935,94.0
+fixed-500-all-MiniLM-L6-v2,fixed,500,sentence-transformers/all-MiniLM-L6-v2,0.9,0.95,1.0,0.935,93.0
+fixed-1200-bge-small-en-v1.5,fixed,1200,BAAI/bge-small-en-v1.5,0.9,0.95,0.95,0.925,35.0
+sentence-500-all-MiniLM-L6-v2,sentence,500,sentence-transformers/all-MiniLM-L6-v2,0.85,1.0,1.0,0.917,94.0
+fixed-500-bge-small-en-v1.5,fixed,500,BAAI/bge-small-en-v1.5,0.85,0.95,1.0,0.912,93.0
+sentence-1200-all-MiniLM-L6-v2,sentence,1200,sentence-transformers/all-MiniLM-L6-v2,0.85,1.0,1.0,0.908,37.0
+sentence-1200-bge-small-en-v1.5,sentence,1200,BAAI/bge-small-en-v1.5,0.8,1.0,1.0,0.892,37.0
+sentence-800-all-MiniLM-L6-v2,sentence,800,sentence-transformers/all-MiniLM-L6-v2,0.8,1.0,1.0,0.892,58.0
+fixed-1200-all-MiniLM-L6-v2,fixed,1200,sentence-transformers/all-MiniLM-L6-v2,0.75,0.95,1.0,0.86,35.0
