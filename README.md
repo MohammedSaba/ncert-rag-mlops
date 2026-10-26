@@ -10,16 +10,16 @@ The focus of this project is the engineering around the model: measured retrieva
 
 ```mermaid
 flowchart LR
-    PDF[NCERT PDF] --> ING[Ingest: clean + sentence-aware chunking]
-    ING --> CH[(chunks.jsonl)]
-    CH --> EMB[bge-small embeddings]
-    EMB --> IDX[(FAISS index)]
-    Q[Student question] --> API[FastAPI /ask]
+    PDF["NCERT PDF"] --> ING["Ingest: clean + sentence-aware chunking"]
+    ING --> CH[("chunks.jsonl")]
+    CH --> EMB["bge-small embeddings"]
+    EMB --> IDX[("FAISS index")]
+    Q["Student question"] --> API["FastAPI: POST /ask"]
     API --> IDX
-    IDX -->|top-4 chunks| LLM[LLM: Ollama or Groq]
-    LLM --> A[Answer + page citations]
-    API --> LOG[(JSONL request log)]
-    FB[/feedback] --> LOG2[(JSONL feedback log)]
+    IDX -->|"top-4 chunks"| LLM["LLM: Ollama or Groq"]
+    LLM --> A["Answer + page citations"]
+    API --> LOG[("Request log (JSONL)")]
+    FB["POST /feedback"] --> LOG2[("Feedback log (JSONL)")]
 ```
 
 ## What was measured
